@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ file.filename }}</title>
+</head>
+<body><h1>filename: {{ file.filename }}</h1>
+<table border="1" width="100%">
+    <thead>
+        <td>Coords</td>
+        <td>Content</td>
+    </thead>
+    {% for content in contents %}
+    <tr>
+        <td><p>x: {{ content.x }}</p>
+            <p>y: {{ content.y }}</p></td>
+         <td>{{ content.text }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
