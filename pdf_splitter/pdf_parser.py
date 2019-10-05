@@ -10,9 +10,9 @@ ALLOWED_EXTENSIONS = set(['pdf'])
 
 def pdfparser(path: str) -> list:
     """
-    Parse pdf file to
+    Parse pdf file to list contains content grouped in tuples (xcor, ycor, text)
     :param path: pdf file path
-    :return: list with tuples: (x cor, y cor, text)
+    :return: pdf content. list with tuples: (x cor, y cor, text)
     """
     if not allowed_file(path):
         return 'Incorrect file.'
