@@ -5,3 +5,5 @@ venv
 uploads
 _pycache_
 task.txt
+*.idea
+
