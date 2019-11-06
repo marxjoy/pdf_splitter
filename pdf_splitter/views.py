@@ -27,6 +27,7 @@ def upload_file():
             return redirect(request.url)
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
+            print(filename)
             file_path = os.path.join(os.getcwd(), app.config['UPLOAD_FOLDER'], filename)
             file.save(file_path)
             document = DocumentPDF(filename=filename,file_content=pdfparser(file_path))
